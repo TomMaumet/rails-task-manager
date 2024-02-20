@@ -1,0 +1,18 @@
+<h2><%= @task.title %></h2>
+<p><%= @task.details %></p>
+<p><%= @task.completed %></p>
+
+
+<%= link_to edit_path do %>
+<button type="button" class="btn btn-warning">Modify</button>
+<% end %>
+
+<%= link_to task_path(@task),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+  <button type="button" class="btn btn-danger">Danger</button>
+  <% end %>
+
+
+<%= link_to tasks_path  do %>
+<button type="button" class="btn btn-info">Main page</button>
+<% end %>

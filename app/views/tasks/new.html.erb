@@ -1,0 +1,15 @@
+<h1>"What's your next task ?</h1>
+
+<%= form_with model: @task do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title %>
+<%= f.label :details %>
+<%= f.text_field :details %>
+<%= f.label :completed %>
+<%= f.text_field :false %>
+<%= f.submit "Create" %>
+<% end %>
+
+<%= link_to tasks_path  do %>
+<button type="button" class="btn btn-info">Main page</button>
+<% end %>
